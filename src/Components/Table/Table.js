@@ -127,18 +127,6 @@ const Table = () => {
     };
 
     useEffect(() => {
-        const autoDeleteContact = () => {
-            const newContacts = [...contacts];
-            newContacts.pop();
-            setContacts(newContacts);
-        };
-        setTimeout(() => {
-            autoDeleteContact();
-        }, 10000)
-
-    });
-
-    useEffect(() => {
         let isAdd = false;
         const autoAddContact = async () => {
             const fullName = `${firstName[getRandomNum(firstName.length)]} ${lastName[getRandomNum(lastName.length)]}`;
